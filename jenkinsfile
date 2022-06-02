@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                echo "This is a test"
+                echo ""
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'This is a build'
+                bat 'cd D:\\nodeJS_workspace\\todo-list-3121358051-LiuJiahao\\todo-list &npm help npm'
+            }
+        }
+        stage('Deploy') {
+            steps{
+                echo 'This is a deploy'
+            }
+        }
+    }
+}
